@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smart chat box</title>
+    <style>
+        body{
+            height:600px;
+            width:300px;
+            font-family: Arial, sans-serif;
+            padding: 1.8%;
+        }
+        #question{
+            width: 95%;
+            position: fixed;
+            bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 60px;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        button {
+            width: 100%;
+            padding: 8px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #answer {
+            margin-top: 10px;
+            white-space: pre-wrap;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="answer"></div>
+    <div id="question">
+        <textarea id="textspace" placeholder="Ask your question"></textarea>
+        <button id="btn">ASK</button>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
