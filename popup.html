@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Smart chat box</title>
@@ -44,5 +44,111 @@
     </div>
 
     <script src="popup.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Smart Chat Box</title>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-dark: #4338ca;
+      --bg: #f0f4f8;
+      --card-bg: rgba(255, 255, 255, 0.9);
+      --border: #d1d5db;
+    }
+
+    body {
+      width: 320px;
+      height: 600px;
+      margin: 0;
+      padding: 16px;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(145deg, #e0e7ff, #f9fafb);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+      color: #111827;
+    }
+
+    #answer {
+      flex-grow: 1;
+      padding: 14px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      font-size: 14px;
+      line-height: 1.6;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(4px);
+      transition: all 0.3s ease;
+    }
+
+    #question {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 70px;
+      padding: 10px 12px;
+      font-size: 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      box-sizing: border-box;
+      background-color: #fff;
+      resize: none;
+      transition: 0.2s ease;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 6px rgba(79, 70, 229, 0.3);
+    }
+
+    button {
+      padding: 12px;
+      width: 100%;
+      font-size: 15px;
+      background: linear-gradient(to right, var(--primary), var(--primary-dark));
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s ease, transform 0.1s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, var(--primary-dark), #312e81);
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+
+    ::placeholder {
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <div id="answer">AI answer will appear here...</div>
+
+  <div id="question">
+    <textarea id="textspace" placeholder="Ask your question..."></textarea>
+    <button id="btn">Ask</button>
+  </div>
+
+  <script src="popup.js"></script>
 </body>
 </html>
